@@ -15,8 +15,18 @@ console.log(calculateCube(5));
 
 > => 125
 
+//
+const calculateCube = (cube) => {
+	return (cube ** 3);
+}
+console.log(calculateCube(5));
+```
 
-# 2
+> => 125
+
+
+# 2 
+
 ## Is a Vowel?
 Write a function `isAVowel` that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case.
 
@@ -25,6 +35,23 @@ console.log(isAVowel("a"));
 ```
 
 > => true
+
+var findVowel = function(letter) {
+
+var vowels = ["a", "e", "i", "o", "u"];
+
+for(var i in vowels){
+
+    if(letter === i){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+};
+
+findVowel("e");
 
 
 # 3
@@ -62,6 +89,23 @@ console.log(maxOfThree(6, 9, 1));
 > => 9
 
 
+var maxOfThree = (num1, num2, num3) =>{
+ let x = ""
+ if(num1 >= num2 && num1 >= num3) {
+ x = num1;
+ } else if(num2 >= num1 && num2 >= num3) {
+ x = num2;
+ } else if(num3 >= num1 && num3 >= num2) {
+ x = num3;
+ }
+ return x;
+ }
+ {
+ console.log(maxOfThree(6, 9, 1));
+
+ }
+
+
 # 6
 ## Print Longest Word
 
@@ -72,6 +116,31 @@ console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanut
 ```
 
 > => "Peanutbutter"
+
+//
+
+function printLongestWord(arr)
+ {
+   let word= "";
+   let i =0;
+   while(i < arr.length)
+   {
+
+     if(word.length < arr[i].length)
+     {
+       word = arr[i]
+
+     }
+     i++;
+   }
+   return word;
+
+
+
+ }
+ console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob",]))
+
+
 
 
 # 7
@@ -88,6 +157,16 @@ console.log(transmogrify(5, 3, 2));
 ```
 
 > => 225
+
+
+
+
+var transmogrify = (num1, num2, num3) =>{
+ return ((num1*num2)**num3);
+ }
+
+ console.log(transmogrify(5, 3, 2)); 
+
 
 <br>
 <hr>
